@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#173c2e">
+<title>KELOMPOK 12 | Sustainable Development Goals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --forest:#173c2e;
+  --green:#46745a;
+  --cream:#f4f3e9;
+  --red:#ed514b;
+  --yellow:#f4c43d;
+  --burgundy:#aa3b52;
+  --glass:rgba(230,239,230,.24);
+  --border:rgba(255,255,255,.43);
+  --text:#f9faf4;
+  --dark:#19251f;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{
+  margin:0;
+  color:var(--dark);
+  font-family:"DM Sans",sans-serif;
+  background:#173c2e;
+  background-image:
+    linear-gradient(120deg,rgba(8,27,21,.42),rgba(13,40,29,.13) 50%,rgba(7,25,20,.38)),
+    url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2400&q=90");
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+  line-height:1.65;
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+button,a{-webkit-tap-highlight-color:transparent}
+button:focus-visible,a:focus-visible{outline:3px solid var(--yellow);outline-offset:4px}
+img{max-width:100%}
+::selection{background:var(--yellow);color:var(--dark)}
+
+.glass{
+  background:rgba(225,237,227,.25);
+  border:1px solid var(--border);
+  -webkit-backdrop-filter:blur(15px) saturate(140%);
+  backdrop-filter:blur(15px) saturate(140%);
+  box-shadow:0 18px 55px rgba(5,24,17,.13),
+             inset 0 1px 0 rgba(255,255,255,.25);
+}
+.topbar{
+  position:sticky;
+  top:12px;
+  z-index:100;
+  width:min(1500px,94%);
+  margin:12px auto 18px;
+  min-height:76px;
+  padding:12px 22px;
+  border-radius:25px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.brand-icon{
+  display:grid;place-items:center;
+  width:47px;height:47px;
+  background:#18241f;color:#fff;
+  border-radius:15px;
+  font-family:Manrope,sans-serif;
+  font-weight:800;font-size:19px;line-height:1.1;
+}
+.brand-icon span{color:var(--yellow);display:block;text-align:center}
+.brand-name{font-family:Manrope,sans-serif;font-size:14px;font-weight:800}
+.brand-name small{
+  display:block;font-size:9px;letter-spacing:1.5px;
+  font-weight:500;opacity:.75;margin-top:3px;
+}
+.nav{display:flex;align-items:center;gap:5px}
+.nav a{
+  font-size:12px;font-weight:600;
+  padding:10px 13px;border-radius:30px;
+  transition:.25s;
+}
+.nav a:hover,.nav a.active{
+  background:rgba(255,255,255,.78);color:var(--dark);
+}
+.nav .nav-cta{border:1px solid var(--border);padding:11px 18px}
+.menu-button{
+  display:none;background:transparent;border:0;
+  color:var(--dark);font-size:25px;
+}
+
+main{width:min(1500px,94%);margin:auto}
+.hero{
+  position:relative;
+  min-height:650px;
+  padding:clamp(30px,5vw,75px);
+  border-radius:32px;
+  overflow:hidden;
+  display:grid;
+  grid-template-columns:1.04fr .96fr;
+  align-items:center;
+  gap:25px;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(90deg,rgba(9,29,22,.29),rgba(9,29,22,.04));
+}
+.hero-copy,.hero-art{position:relative;z-index:1}
+.kicker{
+  display:flex;align-items:center;gap:10px;
+  font-size:10px;letter-spacing:2px;font-weight:800;
+  text-transform:uppercase;color:rgba(255,255,255,.82);
+}
+.kicker::before{
+  content:"";width:8px;height:8px;border-radius:50%;
+  background:#73c48a;box-shadow:0 0 15px #73c48a;
+}
+.hero h1{
+  font-family:Manrope,sans-serif;
+  color:#fff;font-size:clamp(54px,6.3vw,96px);
+  font-weight:800;line-height:.99;
+  letter-spacing:-5px;margin:28px 0 22px;
+}
+.hero h1 span{color:#ff776b}
+.hero-description{
+  color:rgba(255,255,255,.88);
+  font-size:clamp(14px,1.2vw,17px);
+  max-width:570px;line-height:1.85;
+}
+.hero-buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:27px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  gap:16px;padding:15px 23px;border-radius:50px;
+  border:1px solid rgba(255,255,255,.45);
+  font-weight:700;font-size:13px;transition:.25s;
+}
+.btn:hover{transform:translateY(-3px)}
+.btn-light{background:rgba(250,250,241,.92);color:var(--dark)}
+.btn-glass{background:rgba(255,255,255,.09);color:white}
+.project-note{
+  margin-top:30px;padding-left:20px;
+  border-left:2px solid #ff776b;
+  color:rgba(255,255,255,.82);font-size:11px;
+}
+.project-note b{color:white}
+.hero-bottom{
+  position:absolute;bottom:23px;left:clamp(30px,5vw,75px);
+  right:clamp(30px,5vw,75px);
+  display:flex;align-items:center;gap:18px;
+  color:rgba(255,255,255,.78);font-size:10px;
+  letter-spacing:1px;text-transform:uppercase;
+}
+.hero-bottom .line{height:1px;background:rgba(255,255,255,.4);flex:1}
+.hero-bottom span:last-child{text-transform:none;letter-spacing:0}
+
+.hero-art{
+  min-height:460px;display:grid;place-items:center;
+}
+.orbit{
+  width:min(100%,480px);aspect-ratio:1;
+  border:1px solid rgba(255,255,255,.26);
+  border-radius:50%;position:relative;
+  display:grid;place-items:center;
+}
+.orbit::before,.orbit::after{
+  content:"";position:absolute;border-radius:50%;
+  border:1px solid rgba(255,255,255,.23);
+}
+.orbit::before{inset:8%}
+.orbit::after{inset:17%;border-style:dashed}
+.orbit-core{
+  width:43%;aspect-ratio:1;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  flex-direction:column;text-align:center;
+  background:rgba(17,31,26,.83);color:white;
+  border:1px solid rgba(255,255,255,.36);
+  box-shadow:0 0 0 14px rgba(236,235,209,.14),
+             0 0 0 15px rgba(255,255,255,.22);
+  -webkit-backdrop-filter:blur(12px);
+  backdrop-filter:blur(12px);
+}
+.orbit-core .leaf{font-size:25px;color:var(--yellow)}
+.orbit-core strong{
+  font:800 clamp(30px,4vw,53px)/1 Manrope,sans-serif;
+  margin:8px 0;
+}
+.orbit-core b{font-size:10px;letter-spacing:2px;line-height:1.5}
+.orbit-core small{font-size:7px;letter-spacing:1px;margin-top:9px;color:#cbd3c7}
+.orbit-dot{position:absolute;width:13px;height:13px;border-radius:50%}
+.dot-red{background:var(--red);top:15%;right:17%}
+.dot-yellow{background:var(--yellow);bottom:19%;right:15%}
+.dot-green{background:#75c498;bottom:30%;left:8%}
+.sdg-float{
+  position:absolute;z-index:3;
+  width:
