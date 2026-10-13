@@ -1,201 +1,1420 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#173c2e">
-<title>KELOMPOK 12 | Sustainable Development Goals</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173c2e">
+  <meta name="description" content="KELOMPOK 12 membahas SDG 1, SDG 2, dan SDG 4 untuk masa depan Indonesia.">
 
-<style>
-:root{
-  --forest:#173c2e;
-  --green:#46745a;
-  --cream:#f4f3e9;
-  --red:#ed514b;
-  --yellow:#f4c43d;
-  --burgundy:#aa3b52;
-  --glass:rgba(230,239,230,.24);
-  --border:rgba(255,255,255,.43);
-  --text:#f9faf4;
-  --dark:#19251f;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:100px}
-body{
-  margin:0;
-  color:var(--dark);
-  font-family:"DM Sans",sans-serif;
-  background:#173c2e;
-  background-image:
-    linear-gradient(120deg,rgba(8,27,21,.42),rgba(13,40,29,.13) 50%,rgba(7,25,20,.38)),
-    url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2400&q=90");
-  background-size:cover;
-  background-position:center;
-  background-attachment:fixed;
-  line-height:1.65;
-}
-a{color:inherit;text-decoration:none}
-button{font:inherit;cursor:pointer}
-button,a{-webkit-tap-highlight-color:transparent}
-button:focus-visible,a:focus-visible{outline:3px solid var(--yellow);outline-offset:4px}
-img{max-width:100%}
-::selection{background:var(--yellow);color:var(--dark)}
+  <title>KELOMPOK 12 | Sustainable Development Goals</title>
 
-.glass{
-  background:rgba(225,237,227,.25);
-  border:1px solid var(--border);
-  -webkit-backdrop-filter:blur(15px) saturate(140%);
-  backdrop-filter:blur(15px) saturate(140%);
-  box-shadow:0 18px 55px rgba(5,24,17,.13),
-             inset 0 1px 0 rgba(255,255,255,.25);
-}
-.topbar{
-  position:sticky;
-  top:12px;
-  z-index:100;
-  width:min(1500px,94%);
-  margin:12px auto 18px;
-  min-height:76px;
-  padding:12px 22px;
-  border-radius:25px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-}
-.brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
-.brand-icon{
-  display:grid;place-items:center;
-  width:47px;height:47px;
-  background:#18241f;color:#fff;
-  border-radius:15px;
-  font-family:Manrope,sans-serif;
-  font-weight:800;font-size:19px;line-height:1.1;
-}
-.brand-icon span{color:var(--yellow);display:block;text-align:center}
-.brand-name{font-family:Manrope,sans-serif;font-size:14px;font-weight:800}
-.brand-name small{
-  display:block;font-size:9px;letter-spacing:1.5px;
-  font-weight:500;opacity:.75;margin-top:3px;
-}
-.nav{display:flex;align-items:center;gap:5px}
-.nav a{
-  font-size:12px;font-weight:600;
-  padding:10px 13px;border-radius:30px;
-  transition:.25s;
-}
-.nav a:hover,.nav a.active{
-  background:rgba(255,255,255,.78);color:var(--dark);
-}
-.nav .nav-cta{border:1px solid var(--border);padding:11px 18px}
-.menu-button{
-  display:none;background:transparent;border:0;
-  color:var(--dark);font-size:25px;
-}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-main{width:min(1500px,94%);margin:auto}
-.hero{
-  position:relative;
-  min-height:650px;
-  padding:clamp(30px,5vw,75px);
-  border-radius:32px;
-  overflow:hidden;
-  display:grid;
-  grid-template-columns:1.04fr .96fr;
-  align-items:center;
-  gap:25px;
-}
-.hero::before{
-  content:"";position:absolute;inset:0;pointer-events:none;
-  background:linear-gradient(90deg,rgba(9,29,22,.29),rgba(9,29,22,.04));
-}
-.hero-copy,.hero-art{position:relative;z-index:1}
-.kicker{
-  display:flex;align-items:center;gap:10px;
-  font-size:10px;letter-spacing:2px;font-weight:800;
-  text-transform:uppercase;color:rgba(255,255,255,.82);
-}
-.kicker::before{
-  content:"";width:8px;height:8px;border-radius:50%;
-  background:#73c48a;box-shadow:0 0 15px #73c48a;
-}
-.hero h1{
-  font-family:Manrope,sans-serif;
-  color:#fff;font-size:clamp(54px,6.3vw,96px);
-  font-weight:800;line-height:.99;
-  letter-spacing:-5px;margin:28px 0 22px;
-}
-.hero h1 span{color:#ff776b}
-.hero-description{
-  color:rgba(255,255,255,.88);
-  font-size:clamp(14px,1.2vw,17px);
-  max-width:570px;line-height:1.85;
-}
-.hero-buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:27px}
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;
-  gap:16px;padding:15px 23px;border-radius:50px;
-  border:1px solid rgba(255,255,255,.45);
-  font-weight:700;font-size:13px;transition:.25s;
-}
-.btn:hover{transform:translateY(-3px)}
-.btn-light{background:rgba(250,250,241,.92);color:var(--dark)}
-.btn-glass{background:rgba(255,255,255,.09);color:white}
-.project-note{
-  margin-top:30px;padding-left:20px;
-  border-left:2px solid #ff776b;
-  color:rgba(255,255,255,.82);font-size:11px;
-}
-.project-note b{color:white}
-.hero-bottom{
-  position:absolute;bottom:23px;left:clamp(30px,5vw,75px);
-  right:clamp(30px,5vw,75px);
-  display:flex;align-items:center;gap:18px;
-  color:rgba(255,255,255,.78);font-size:10px;
-  letter-spacing:1px;text-transform:uppercase;
-}
-.hero-bottom .line{height:1px;background:rgba(255,255,255,.4);flex:1}
-.hero-bottom span:last-child{text-transform:none;letter-spacing:0}
+  <style>
+    :root {
+      --green: #173c2e;
+      --green-light: #285d45;
+      --cream: #f5f3e9;
+      --white: #fffefa;
+      --red: #e84d45;
+      --yellow: #efbd37;
+      --burgundy: #a83c52;
+      --text: #1d2524;
+      --muted: #68716a;
+      --glass: rgba(245, 248, 239, 0.76);
+      --border: rgba(255, 255, 255, 0.48);
+      --radius: 22px;
+    }
 
-.hero-art{
-  min-height:460px;display:grid;place-items:center;
-}
-.orbit{
-  width:min(100%,480px);aspect-ratio:1;
-  border:1px solid rgba(255,255,255,.26);
-  border-radius:50%;position:relative;
-  display:grid;place-items:center;
-}
-.orbit::before,.orbit::after{
-  content:"";position:absolute;border-radius:50%;
-  border:1px solid rgba(255,255,255,.23);
-}
-.orbit::before{inset:8%}
-.orbit::after{inset:17%;border-style:dashed}
-.orbit-core{
-  width:43%;aspect-ratio:1;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  flex-direction:column;text-align:center;
-  background:rgba(17,31,26,.83);color:white;
-  border:1px solid rgba(255,255,255,.36);
-  box-shadow:0 0 0 14px rgba(236,235,209,.14),
-             0 0 0 15px rgba(255,255,255,.22);
-  -webkit-backdrop-filter:blur(12px);
-  backdrop-filter:blur(12px);
-}
-.orbit-core .leaf{font-size:25px;color:var(--yellow)}
-.orbit-core strong{
-  font:800 clamp(30px,4vw,53px)/1 Manrope,sans-serif;
-  margin:8px 0;
-}
-.orbit-core b{font-size:10px;letter-spacing:2px;line-height:1.5}
-.orbit-core small{font-size:7px;letter-spacing:1px;margin-top:9px;color:#cbd3c7}
-.orbit-dot{position:absolute;width:13px;height:13px;border-radius:50%}
-.dot-red{background:var(--red);top:15%;right:17%}
-.dot-yellow{background:var(--yellow);bottom:19%;right:15%}
-.dot-green{background:#75c498;bottom:30%;left:8%}
-.sdg-float{
-  position:absolute;z-index:3;
-  width:
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 95px;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "DM Sans", sans-serif;
+      color: var(--text);
+      line-height: 1.7;
+      background:
+        linear-gradient(
+          120deg,
+          rgba(7, 27, 22, 0.48),
+          rgba(16, 40, 31, 0.18),
+          rgba(12, 29, 23, 0.38)
+        ),
+        url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2400&q=90")
+        center / cover fixed;
+      background-color: var(--green);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .container {
+      width: min(1160px, 90%);
+      margin: auto;
+    }
+
+    .progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      height: 4px;
+      width: 0;
+      background: var(--yellow);
+    }
+
+    /* NAVIGATION */
+
+    header {
+      position: sticky;
+      top: 10px;
+      z-index: 100;
+      width: min(1200px, 94%);
+      margin: 10px auto 0;
+      padding: 14px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: rgba(231, 239, 232, 0.78);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+      box-shadow: 0 8px 35px rgba(9, 28, 22, 0.12);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-logo {
+      display: grid;
+      place-items: center;
+      width: 45px;
+      height: 45px;
+      color: white;
+      background: var(--green);
+      border-radius: 13px;
+      font-family: "Manrope", sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+    }
+
+    .brand-logo span {
+      color: var(--yellow);
+    }
+
+    .brand-name {
+      font-family: "Manrope", sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      line-height: 1.4;
+    }
+
+    .brand-name small {
+      display: block;
+      color: var(--muted);
+      font-size: 8px;
+      letter-spacing: 1.5px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    nav a {
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--red);
+    }
+
+    .nav-button {
+      padding: 10px 16px;
+      border: 1px solid rgba(29, 37, 36, 0.25);
+      border-radius: 50px;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: transparent;
+      font-size: 25px;
+    }
+
+    /* GLASS EFFECT */
+
+    .glass {
+      border: 1px solid var(--border);
+      background: var(--glass);
+      backdrop-filter: blur(18px) saturate(135%);
+      -webkit-backdrop-filter: blur(18px) saturate(135%);
+      box-shadow:
+        0 18px 55px rgba(8, 28, 21, 0.14),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    }
+
+    .section {
+      margin-top: 28px;
+      padding: clamp(25px, 5vw, 65px);
+      border-radius: var(--radius);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.7px;
+      text-transform: uppercase;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      background: var(--green-light);
+      border-radius: 50%;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: "Manrope", sans-serif;
+      line-height: 1.15;
+    }
+
+    .section-title {
+      margin: 15px 0 20px;
+      font-size: clamp(30px, 4vw, 49px);
+      letter-spacing: -2px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .section-description {
+      max-width: 620px;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 650px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 35px;
+      padding-top: 75px;
+      padding-bottom: 75px;
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      margin: 25px 0;
+      font-size: clamp(52px, 7vw, 88px);
+      font-weight: 800;
+      letter-spacing: -5px;
+      line-height: 0.98;
+    }
+
+    .hero h1 em {
+      color: var(--red);
+      font-style: normal;
+    }
+
+    .hero-description {
+      max-width: 490px;
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 15px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      padding: 13px 20px;
+      border: 1px solid transparent;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 800;
+      transition: 0.25s;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.13);
+    }
+
+    .button-dark {
+      background: var(--green);
+      color: white;
+    }
+
+    .button-light {
+      border-color: rgba(29, 37, 36, 0.25);
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .hero-note {
+      margin-top: 35px;
+      font-size: 11px;
+    }
+
+    .hero-visual {
+      position: relative;
+      display: grid;
+      place-items: center;
+      min-height: 430px;
+    }
+
+    .orbit {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border: 1px solid rgba(29, 37, 36, 0.2);
+      border-radius: 50%;
+    }
+
+    .orbit-two {
+      width: 370px;
+      height: 260px;
+      transform: rotate(45deg);
+      border-style: dashed;
+    }
+
+    .sun {
+      position: absolute;
+      width: 230px;
+      height: 230px;
+      background: rgba(239, 189, 55, 0.27);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 50%;
+    }
+
+    .center-circle {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      background: var(--green);
+      color: white;
+      text-align: center;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+    }
+
+    .center-circle .year {
+      font-family: "Manrope", sans-serif;
+      font-size: 43px;
+      font-weight: 800;
+    }
+
+    .center-circle strong {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+    }
+
+    .floating-label {
+      position: absolute;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: rgba(255, 254, 250, 0.88);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .floating-label b {
+      display: block;
+      font-size: 11px;
+    }
+
+    .floating-label small {
+      display: block;
+      font-size: 9px;
+      color: var(--muted);
+    }
+
+    .number {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      flex-shrink: 0;
+      border-radius: 10px;
+      color: white;
+      background: var(--red);
+      font-family: "Manrope", sans-serif;
+      font-weight: 800;
+    }
+
+    .number.yellow {
+      background: var(--yellow);
+      color: var(--text);
+    }
+
+    .number.burgundy {
+      background: var(--burgundy);
+    }
+
+    .label-one {
+      top: 35px;
+      left: 0;
+    }
+
+    .label-two {
+      top: 180px;
+      right: -5px;
+    }
+
+    .label-four {
+      bottom: 35px;
+      left: 15px;
+    }
+
+    /* INTRODUCTION */
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 25px;
+    }
+
+    .quote {
+      margin-top: 25px;
+      padding: 18px;
+      border-left: 4px solid var(--red);
+      background: rgba(255, 255, 255, 0.35);
+      border-radius: 0 12px 12px 0;
+      font-family: "Manrope", sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .principles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 35px;
+    }
+
+    .principle {
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.32);
+    }
+
+    .principle .icon {
+      font-size: 25px;
+    }
+
+    .principle h3 {
+      margin: 10px 0 5px;
+      font-size: 13px;
+    }
+
+    .principle p {
+      font-size: 11px;
+    }
+
+    /* SDG CARDS */
+
+    .sdg-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 17px;
+      margin-top: 35px;
+    }
+
+    .sdg-card {
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.48);
+      transition: 0.25s;
+    }
+
+    .sdg-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.75);
+    }
+
+    .sdg-number {
+      display: grid;
+      place-items: center;
+      width: 58px;
+      height: 58px;
+      margin-bottom: 20px;
+      border-radius: 14px;
+      color: white;
+      background: var(--red);
+      font-size: 23px;
+      font-weight: 800;
+    }
+
+    .sdg-number.yellow {
+      color: var(--text);
+      background: var(--yellow);
+    }
+
+    .sdg-number.burgundy {
+      background: var(--burgundy);
+    }
+
+    .sdg-card h3 {
+      margin-bottom: 10px;
+      font-size: 19px;
+    }
+
+    .sdg-card p {
+      font-size: 12px;
+      line-height: 1.9;
+    }
+
+    .sdg-card ul {
+      margin: 16px 0 0 18px;
+      font-size: 11px;
+    }
+
+    /* CONNECTION */
+
+    .connection-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .connection-card {
+      padding: 23px;
+      border-radius: 17px;
+      background: rgba(255, 255, 255, 0.38);
+      border: 1px solid var(--border);
+    }
+
+    .connection-card h3 {
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+
+    .connection-card p {
+      font-size: 12px;
+    }
+
+    .arrow {
+      margin: 12px 0;
+      color: var(--red);
+      font-size: 24px;
+      font-weight: 800;
+    }
+
+    /* STATISTICS */
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .stat-card {
+      padding: 24px;
+      border-radius: 17px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    .stat-card .stat-number {
+      font-family: "Manrope", sans-serif;
+      font-size: 33px;
+      font-weight: 800;
+    }
+
+    .stat-card p {
+      margin-top: 8px;
+      font-size: 11px;
+    }
+
+    .stat-note {
+      margin-top: 20px;
+      font-size: 10px;
+    }
+
+    /* ACTION PLAN */
+
+    .action-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .action-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      padding: 17px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.42);
+    }
+
+    .action-item input {
+      width: 18px;
+      height: 18px;
+      margin-top: 4px;
+      accent-color: var(--green);
+      flex-shrink: 0;
+    }
+
+    .action-item b {
+      display: block;
+      font-size: 13px;
+    }
+
+    .action-item p {
+      font-size: 11px;
+    }
+
+    .action-item.completed {
+      opacity: 0.65;
+    }
+
+    .action-item.completed b {
+      text-decoration: line-through;
+    }
+
+    .action-status {
+      margin-top: 15px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* REFERENCES */
+
+    .reference-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .reference {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 17px;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      background: rgba(255, 255, 255, 0.4);
+      font-size: 12px;
+    }
+
+    .reference a {
+      font-weight: 800;
+      color: var(--green);
+      white-space: nowrap;
+    }
+
+    .reference a:hover {
+      color: var(--red);
+    }
+
+    /* TEAM */
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .team-member {
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.44);
+    }
+
+    .team-avatar {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 17px;
+      border-radius: 15px;
+      background: var(--green);
+      color: white;
+      font-family: "Manrope", sans-serif;
+      font-weight: 800;
+    }
+
+    .team-member h3 {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    .team-member p {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* FOOTER */
+
+    footer {
+      width: min(1160px, 90%);
+      margin: 28px auto 20px;
+      padding: 35px;
+      color: white;
+      text-align: center;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: rgba(13, 28, 24, 0.83);
+      backdrop-filter: blur(18px);
+    }
+
+    footer h2 {
+      margin-bottom: 10px;
+      font-size: 23px;
+    }
+
+    footer p {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .back-top {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 9px 15px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 30px;
+      font-size: 11px;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 850px) {
+      header {
+        padding: 12px 17px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: rgba(245, 248, 239, 0.97);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      nav a {
+        padding: 12px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 50px;
+      }
+
+      .hero-visual {
+        min-height: 390px;
+      }
+
+      .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .principles,
+      .sdg-grid,
+      .connection-grid,
+      .stats-grid,
+      .team-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .label-two {
+        right: 0;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        width: 92%;
+      }
+
+      .section {
+        padding: 24px 19px;
+      }
+
+      .hero h1 {
+        font-size: 54px;
+        letter-spacing: -3px;
+      }
+
+      .hero-visual {
+        min-height: 320px;
+      }
+
+      .orbit {
+        width: 230px;
+        height: 230px;
+      }
+
+      .orbit-two {
+        width: 280px;
+        height: 200px;
+      }
+
+      .sun {
+        width: 190px;
+        height: 190px;
+      }
+
+      .center-circle {
+        width: 140px;
+        height: 140px;
+      }
+
+      .center-circle .year {
+        font-size: 35px;
+      }
+
+      .floating-label {
+        padding: 8px;
+      }
+
+      .floating-label small {
+        max-width: 115px;
+      }
+
+      .label-one {
+        top: 8px;
+      }
+
+      .label-two {
+        top: 135px;
+      }
+
+      .label-four {
+        bottom: 5px;
+      }
+
+      .principles,
+      .sdg-grid,
+      .connection-grid,
+      .stats-grid,
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .reference {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      footer {
+        padding: 28px 18px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="progress" id="progress"></div>
+
+  <header>
+    <a href="#home" class="brand">
+      <div class="brand-logo">K<span>12</span></div>
+      <div class="brand-name">
+        KELOMPOK 12
+        <small>SDG FIELD NOTES · INDONESIA</small>
+      </div>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav id="navigation">
+      <a href="#tentang">Tentang</a>
+      <a href="#tujuan">Tiga SDGs</a>
+      <a href="#keterkaitan">Keterkaitan</a>
+      <a href="#aksi">Rencana Aksi</a>
+      <a href="#referensi">Referensi</a>
+      <a href="#anggota" class="nav-button">Tim Kami ↗</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <!-- HERO SECTION -->
+    <section class="section glass hero" id="home">
+      <div>
+        <div class="eyebrow">
+          <span class="dot"></span>
+          AGENDA 2030 · PEMBANGUNAN BERKELANJUTAN
+        </div>
+
+        <h1>
+          Tiga tujuan.<br>
+          <em>Satu masa</em><br>
+          depan.
+        </h1>
+
+        <p class="hero-description">
+          Kemiskinan, kelaparan, dan pendidikan bukan masalah yang berdiri sendiri.
+          Ketiganya membentuk pengalaman hidup, peluang, dan masa depan setiap orang.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#tujuan" class="button button-dark">
+            Jelajahi 3 SDGs <span>↘</span>
+          </a>
+
+          <a href="#keterkaitan" class="button button-light">
+            Lihat hubungannya →
+          </a>
+        </div>
+
+        <p class="hero-note">
+          Riset ringkas oleh <b>KELOMPOK 12</b><br>
+          Fokus: Indonesia · SDG 1, 2, dan 4
+        </p>
+      </div>
+
+      <div class="hero-visual">
+        <div class="orbit"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="sun"></div>
+
+        <div class="floating-label label-one">
+          <span class="number">01</span>
+          <span>
+            <b>No Poverty</b>
+            <small>Kesempatan yang setara</small>
+          </span>
+        </div>
+
+        <div class="floating-label label-two">
+          <span class="number yellow">02</span>
+          <span>
+            <b>Zero Hunger</b>
+            <small>Pangan bergizi untuk semua</small>
+          </span>
+        </div>
+
+        <div class="floating-label label-four">
+          <span class="number burgundy">04</span>
+          <span>
+            <b>Quality Education</b>
+            <small>Belajar untuk bertumbuh</small>
+          </span>
+        </div>
+
+        <div class="center-circle">
+          <span class="year">2030</span>
+          <strong>AGENDA<br>BERSAMA</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section glass" id="tentang">
+      <div class="eyebrow">01 — KONTEKS</div>
+
+      <div class="intro-grid">
+        <div>
+          <h2 class="section-title">
+            SDGs bukan sekadar daftar target.
+            <span class="muted">Ini tentang hidup manusia.</span>
+          </h2>
+        </div>
+
+        <div>
+          <p class="section-description">
+            Tujuan Pembangunan Berkelanjutan atau
+            <i>Sustainable Development Goals</i> (SDGs) merupakan 17 tujuan
+            global yang disepakati negara anggota Perserikatan Bangsa-Bangsa
+            pada 2015 melalui Agenda 2030.
+          </p>
+
+          <br>
+
+          <p class="section-description">
+            KELOMPOK 12 memilih SDG 1, SDG 2, dan SDG 4 karena ketiganya
+            berkaitan dengan fondasi kehidupan: memenuhi kebutuhan dasar,
+            memperoleh makanan bergizi, dan mengembangkan pengetahuan.
+          </p>
+
+          <div class="quote">
+            “Kemajuan yang bermakna terjadi ketika setiap orang memperoleh
+            kesempatan untuk hidup sehat, belajar, dan berkembang.”
+          </div>
+        </div>
+      </div>
+
+      <div class="principles">
+        <div class="principle">
+          <div class="icon">🌱</div>
+          <h3>People</h3>
+          <p>Meningkatkan kesejahteraan manusia dan memastikan kebutuhan dasar terpenuhi.</p>
+        </div>
+
+        <div class="principle">
+          <div class="icon">🌍</div>
+          <h3>Planet</h3>
+          <p>Menjaga lingkungan agar tetap mendukung kehidupan generasi mendatang.</p>
+        </div>
+
+        <div class="principle">
+          <div class="icon">🤝</div>
+          <h3>Partnership</h3>
+          <p>Membangun kolaborasi masyarakat, pemerintah, sekolah, dan sektor swasta.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SDG SECTION -->
+    <section class="section glass" id="tujuan">
+      <div class="eyebrow">02 — TIGA TUJUAN UTAMA</div>
+
+      <h2 class="section-title">
+        Tiga SDGs yang saling <span class="muted">menguatkan.</span>
+      </h2>
+
+      <p class="section-description">
+        Setiap tujuan memiliki tantangan dan target tersendiri. Namun,
+        kemajuan pada satu tujuan dapat membantu mempercepat pencapaian tujuan lainnya.
+      </p>
+
+      <div class="sdg-grid">
+        <article class="sdg-card">
+          <div class="sdg-number">01</div>
+          <h3>Tanpa Kemiskinan</h3>
+          <p>
+            SDG 1 bertujuan mengakhiri kemiskinan dalam segala bentuk di mana pun.
+            Kemiskinan bukan hanya persoalan pendapatan, tetapi juga keterbatasan
+            akses terhadap layanan dasar dan kesempatan.
+          </p>
+
+          <ul>
+            <li>Memperluas perlindungan sosial.</li>
+            <li>Meningkatkan kesempatan kerja.</li>
+            <li>Memperluas akses layanan dasar.</li>
+          </ul>
+        </article>
+
+        <article class="sdg-card">
+          <div class="sdg-number yellow">02</div>
+          <h3>Tanpa Kelaparan</h3>
+          <p>
+            SDG 2 bertujuan mengakhiri kelaparan, mencapai ketahanan pangan,
+            meningkatkan gizi, dan mendukung pertanian berkelanjutan.
+          </p>
+
+          <ul>
+            <li>Meningkatkan akses pangan bergizi.</li>
+            <li>Mencegah kekurangan gizi.</li>
+            <li>Mendukung produksi pangan berkelanjutan.</li>
+          </ul>
+        </article>
+
+        <article class="sdg-card">
+          <div class="sdg-number burgundy">04</div>
+          <h3>Pendidikan Berkualitas</h3>
+          <p>
+            SDG 4 bertujuan memastikan pendidikan berkualitas yang inklusif
+            dan merata serta meningkatkan kesempatan belajar sepanjang hayat.
+          </p>
+
+          <ul>
+            <li>Memperluas akses pendidikan.</li>
+            <li>Meningkatkan kualitas pembelajaran.</li>
+            <li>Mendorong kesempatan belajar setara.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONNECTION SECTION -->
+    <section class="section glass" id="keterkaitan">
+      <div class="eyebrow">03 — ANALISIS KETERKAITAN</div>
+
+      <h2 class="section-title">
+        Masalah berbeda, <span class="muted">akar yang berkaitan.</span>
+      </h2>
+
+      <p class="section-description">
+        Kemiskinan, ketahanan pangan, dan pendidikan membentuk hubungan
+        yang saling memengaruhi. Karena itu, penyelesaiannya membutuhkan
+        pendekatan yang terintegrasi.
+      </p>
+
+      <div class="connection-grid">
+        <article class="connection-card">
+          <h3>SDG 1 → SDG 2</h3>
+          <p>
+            Pendapatan yang rendah dapat membatasi kemampuan keluarga
+            membeli makanan yang cukup dan bergizi.
+          </p>
+          <div class="arrow">↓</div>
+          <p>
+            Perlindungan sosial dan peningkatan pendapatan dapat membantu
+            memperkuat akses terhadap pangan.
+          </p>
+        </article>
+
+        <article class="connection-card">
+          <h3>SDG 2 → SDG 4</h3>
+          <p>
+            Kelaparan dan kekurangan gizi dapat memengaruhi kesehatan,
+            konsentrasi, serta kesiapan anak untuk belajar.
+          </p>
+          <div class="arrow">↓</div>
+          <p>
+            Akses terhadap makanan bergizi dapat mendukung partisipasi
+            dan proses belajar di sekolah.
+          </p>
+        </article>
+
+        <article class="connection-card">
+          <h3>SDG 4 → SDG 1</h3>
+          <p>
+            Pendidikan dan keterampilan dapat memperluas kesempatan
+            kerja serta meningkatkan kemampuan seseorang.
+          </p>
+          <div class="arrow">↓</div>
+          <p>
+            Pendidikan berkualitas dapat membantu memutus siklus
+            kemiskinan antargenerasi.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ACTION SECTION -->
+    <section class="section glass" id="aksi">
+      <div class="eyebrow">04 — AKSI NYATA</div>
+
+      <h2 class="section-title">
+        Perubahan besar dimulai dari <span class="muted">langkah kecil.</span>
+      </h2>
+
+      <p class="section-description">
+        Berikut contoh aksi yang dapat dilakukan mahasiswa dan masyarakat
+        untuk mendukung pembangunan berkelanjutan.
+      </p>
+
+      <div class="action-list">
+        <label class="action-item">
+          <input type="checkbox">
+          <span>
+            <b>Mendukung akses pangan</b>
+            <p>Berpartisipasi dalam kegiatan berbagi makanan dan mengurangi pemborosan pangan.</p>
+          </span>
+        </label>
+
+        <label class="action-item">
+          <input type="checkbox">
+          <span>
+            <b>Berbagi kesempatan belajar</b>
+            <p>Mengikuti kegiatan relawan pendidikan, pendampingan belajar, atau berbagi buku.</p>
+          </span>
+        </label>
+
+        <label class="action-item">
+          <input type="checkbox">
+          <span>
+            <b>Mendukung produk lokal</b>
+            <p>Membeli produk lokal secara bijak untuk mendukung penghidupan masyarakat.</p>
+          </span>
+        </label>
+
+        <label class="action-item">
+          <input type="checkbox">
+          <span>
+            <b>Mengurangi sampah makanan</b>
+            <p>Mengambil makanan sesuai kebutuhan dan mengelola sisa makanan dengan tepat.</p>
+          </span>
+        </label>
+
+        <label class="action-item">
+          <input type="checkbox">
+          <span>
+            <b>Menyebarkan informasi yang akurat</b>
+            <p>Menggunakan sumber tepercaya untuk meningkatkan pemahaman tentang SDGs.</p>
+          </span>
+        </label>
+      </div>
+
+      <p class="action-status" id="actionStatus">
+        0 dari 5 aksi telah ditandai.
+      </p>
+    </section>
+
+    <!-- REFERENCES -->
+    <section class="section glass" id="referensi">
+      <div class="eyebrow">05 — REFERENSI</div>
+
+      <h2 class="section-title">
+        Sumber untuk <span class="muted">mempelajari lebih lanjut.</span>
+      </h2>
+
+      <p class="section-description">
+        Gunakan sumber resmi berikut untuk memahami tujuan, target,
+        dan perkembangan pembangunan berkelanjutan.
+      </p>
+
+      <div class="reference-list">
+        <div class="reference">
+          <span>United Nations — Sustainable Development Goals</span>
+          <a href="https://sdgs.un.org/goals" target="_blank" rel="noopener noreferrer">
+            Buka sumber ↗
+          </a>
+        </div>
+
+        <div class="reference">
+          <span>United Nations — Goal 1: No Poverty</span>
+          <a href="https://sdgs.un.org/goals/goal1" target="_blank" rel="noopener noreferrer">
+            Buka sumber ↗
+          </a>
+        </div>
+
+        <div class="reference">
+          <span>United Nations — Goal 2: Zero Hunger</span>
+          <a href="https://sdgs.un.org/goals/goal2" target="_blank" rel="noopener noreferrer">
+            Buka sumber ↗
+          </a>
+        </div>
+
+        <div class="reference">
+          <span>United Nations — Goal 4: Quality Education</span>
+          <a href="https://sdgs.un.org/goals/goal4" target="_blank" rel="noopener noreferrer">
+            Buka sumber ↗
+          </a>
+        </div>
+
+        <div class="reference">
+          <span>Badan Pusat Statistik — Tujuan Pembangunan Berkelanjutan</span>
+          <a href="https://www.bps.go.id/" target="_blank" rel="noopener noreferrer">
+            Buka sumber ↗
+          </a>
+        </div>
+      </div>
+
+      <p class="muted" style="margin-top:18px;font-size:10px;">
+        Catatan: periksa kembali data statistik dan tahun publikasi dari sumber
+        resmi sebelum menggunakannya dalam laporan akademik.
+      </p>
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section class="section glass" id="anggota">
+      <div class="eyebrow">06 — TIM KAMI</div>
+
+      <h2 class="section-title">
+        Di balik proyek <span class="muted">KELOMPOK 12.</span>
+      </h2>
+
+      <p class="section-description">
+        Proyek ini disusun sebagai bentuk pembelajaran dan kontribusi
+        terhadap pemahaman mengenai Tujuan Pembangunan Berkelanjutan.
+      </p>
+
+      <div class="team-grid">
+        <article class="team-member">
+          <div class="team-avatar">RH</div>
+          <h3>Rodrik Hartanto</h3>
+          <p>NIM: 19626090</p>
+        </article>
+
+        <article class="team-member">
+          <div class="team-avatar">SK</div>
+          <h3>Syifa Khanza Naura</h3>
+          <p>NIM: 16526084</p>
+        </article>
+
+        <article class="team-member">
+          <div class="team-avatar">MR</div>
+          <h3>Muhammad Rasyiiq</h3>
+          <p>NIM: 19626204</p>
+        </article>
+
+        <article class="team-member">
+          <div class="team-avatar">F</div>
+          <h3>Fredieco</h3>
+          <p>NIM: 19626078</p>
+        </article>
+
+        <article class="team-member">
+          <div class="team-avatar">MM</div>
+          <h3>Muhammad Maulana Raditya</h3>
+          <p>NIM: 19626162</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <h2>KELOMPOK 12</h2>
+    <p>
+      Tiga tujuan. Satu masa depan.<br>
+      Bersama mendukung pembangunan berkelanjutan.
+    </p>
+
+    <a href="#home" class="back-top">Kembali ke atas ↑</a>
+
+    <p style="margin-top:20px;">
+      © 2026 KELOMPOK 12 · Educational Project
+    </p>
+  </footer>
+
+  <script>
+    // Menu navigasi untuk perangkat seluler
+    const menuToggle = document.getElementById("menuToggle");
+    const navigation = document.getElementById("navigation");
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = navigation.classList.toggle("open");
+
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    // Tutup menu setelah tautan dipilih
+    navigation.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navigation.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    // Indikator progres halaman
+    const progress = document.getElementById("progress");
+
+    function updateProgress() {
+      const scrollable =
+        document.documentElement.scrollHeight - window.innerHeight;
+
+      const percentage = scrollable > 0
+        ? (window.scrollY / scrollable) * 100
+        : 0;
+
+      progress.style.width = percentage + "%";
+    }
+
+    window.addEventListener("scroll", updateProgress);
+    window.addEventListener("resize", updateProgress);
+    updateProgress();
+
+    // Checklist aksi
+    const checkboxes = document.querySelectorAll(
+      '.action-item input[type="checkbox"]'
+    );
+
+    const actionStatus = document.getElementById("actionStatus");
+
+    function updateActions() {
+      let completed = 0;
+
+      checkboxes.forEach(function (checkbox) {
+        const item = checkbox.closest(".action-item");
+
+        if (checkbox.checked) {
+          completed++;
+          item.classList.add("completed");
+        } else {
+          item.classList.remove("completed");
+        }
+      });
+
+      actionStatus.textContent =
+        completed + " dari " + checkboxes.length +
+        " aksi telah ditandai.";
+    }
+
+    checkboxes.forEach(function (checkbox) {
+      checkbox.addEventListener("change", updateActions);
+    });
+
+    updateActions();
+  </script>
+</body>
+</html>
